@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import './Table.css';
 import TableRow from './TableRow'
 
-export default class App extends Component {
+export default class Table extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,14 +19,13 @@ export default class App extends Component {
         return (
             <table>
                 <thead>
-                   <tr>
-                       <th>FX Live Ticker</th>
-                   </tr>
+                <tr>
+                </tr>
                 </thead>
                 <tbody>
-                    {this.state.fxRates.map((rate) => (
-                        <TableRow key={rate.currencyPair} fxData={rate}/>)
-                    )}
+                {this.state.fxRates.map((rate) => (
+                    <TableRow key={rate.currencyPair} fxData={rate}/>)
+                )}
                 </tbody>
             </table>
         );
