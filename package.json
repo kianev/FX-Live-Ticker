@@ -2,6 +2,7 @@
   "name": "fx-live-ticker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kianev.github.io/FX-Live-Ticker/",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
