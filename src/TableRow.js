@@ -15,8 +15,8 @@ export default class TableRow extends Component {
 
         let diff = (prevBidBig + prevBidPips) - (bidBig + bidPips);
 
-        if (diff) this.setState({colorStyle: diff < 0 ? "red" : "green"});
-        if (diff) this.setState({directionArrow: diff < 0 ? "\u25bc" : "\u25b2"});
+        if (diff) this.setState({colorStyle: diff > 0 ? "red" : "green"});
+        if (diff) this.setState({directionArrow: diff > 0 ? "\u25bc" : "\u25b2"});
     }
 
     render() {
@@ -30,7 +30,7 @@ export default class TableRow extends Component {
                 <td style={style}>
                     {this.props.fxData.bidBig}
                     {this.props.fxData.bidPips}
-                    {this.state.directionArrow}
+                    { this.state.directionArrow}
                 </td>
             </tr>
         );
